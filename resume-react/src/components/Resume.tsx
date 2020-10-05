@@ -48,7 +48,6 @@ export default function Resume() {
   if(error) {
     return <div>encountered an error: {error}</div>
   }
-  console.log(data.content);
   return (
     <div>
       <ContactInfo contact_info={data.content.contact_info}/>
