@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "@emotion/styled";
 import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
 import ContactInfo from './ContactInfo';
@@ -49,11 +50,18 @@ export default function Resume() {
     return <div>encountered an error: {error}</div>
   }
   return (
-    <div>
+    <ResumeStyled>
       <ContactInfo contact_info={data.content.contact_info}/>
       <Skills skills={data.content.skills}/>
       <Experience experience={data.content.experience}/>
       <Projects projects={data.content.projects}/>
-    </div>
+    </ResumeStyled>
   );
 }
+
+
+const ResumeStyled = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+`;

@@ -14,9 +14,9 @@ const App: React.FC = (props) => {
 export default App;
 
 const AppContainer = styled.div`
+  box-sizing: border-box;
   background-color: #282c34;
-  min-height: 100vh;
-  max-width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

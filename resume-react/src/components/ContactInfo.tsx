@@ -15,50 +15,61 @@ interface ContactProps {
 }
 // Must be rendered inside of an ApolloProvider
 export default function Contact({contact_info}: ContactProps) {
-  const links = contact_info.links.map((link,index) => <Link key={index}>{link.title}: <a href={link.url}>{link.url}</a></Link>);
+  const links = contact_info.links.map((link,index) => <Link key={index} href={link.url}>{link.title}</Link>);
   return (
-    <ContactContainer>
-        <ul>
+    <ContactUnOrderedList>
+        <ContactListItem>
           <Name>{contact_info.first_name} {contact_info.last_name}</Name>
           <Email>{contact_info.email}</Email>
           <Phone>{contact_info.phone}</Phone>
-        </ul>
-        <ul>
+        </ContactListItem>
+        <ContactListItem>
           {links}
-        </ul>
-    </ContactContainer>
+        </ContactListItem>
+    </ContactUnOrderedList>
   );
 }
 
-const ContactContainer = styled.div`
+const ContactUnOrderedList = styled.ul`
+  box-sizing: border-box;
+  list-style-type: none;
   background-color: #bbb;
-  min-height: 20vh;
-  max-width: 100vw;
-  padding: 20px;
+  min-height: 10vh;
+  max-width: 100%;
+  margin: 0px;
+  padding: 2vh 4vw 4vh 4vw;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-content: flex-start;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
-  color: black;
-`;
-
-const Name = styled.div`
+  flex-wrap: wrap;
   font-size: calc(12px + 2vmin);
   color: black;
 `;
 
+const ContactListItem = styled.li`
+  margin: 1vh 5vw 0 5vw;
+  align-self: flex-end;
+  display: inline-block;
+`;
+
+const Name = styled.div`
+  font-size: calc(16px + 2vmin);
+  color: black;
+`;
+
 const Email = styled.div`
-  font-size: calc(4px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: black;
 `;
 
 const Phone = styled.div`
-  font-size: calc(4px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: black;
 `;
 
-const Link = styled.div`
-  font-size: calc(4px + 2vmin);
+const Link = styled.a`
+  margin-right: 15px;
+  font-size: calc(10px + 2vmin);
   color: black;
 `;
