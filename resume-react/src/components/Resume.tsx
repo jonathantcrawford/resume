@@ -52,9 +52,9 @@ export default function Resume() {
   return (
     <div>
       <ContactInfo contact_info={data.content.contact_info}/>
+      <Skills skills={data.content.skills}/>
       <Experience experience={data.content.experience}/>
       <Projects projects={data.content.projects}/>
-      <Skills skills={data.content.skills}/>
     </div>
   );
 }
