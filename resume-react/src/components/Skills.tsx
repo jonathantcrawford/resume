@@ -20,8 +20,6 @@ const Skills = () => {
 
   return (
     <SkillsContainer>
-      <ContainerHeader>skills</ContainerHeader>
-      <ContainerHr></ContainerHr>
       <SkillsListsContainer>
           <SkillList>
             <SkillType>languages</SkillType>
@@ -82,23 +80,20 @@ const SkillType = styled.li`
 const StyledHr = styled.hr`
   width: 100%;
   border: 1px solid #000;
+  background-color: #000
 `;
 
-const Skill = styled.li`
+const Skill = styled.div`
+  
   line-height: 1.5em;
+  background-color: #DDD;
+  border-radius: 8px;
+  padding: 1vh 1vw 1vh 1vw;
+  margin-bottom: 1em;
+  margin-right: calc(10px + 1vmin);
+  font-size: calc(10px + 1vmin);
+  color: black;
 `;
-
-const ContainerHeader = styled.h1`
-  font-size: calc(10px + 2vmin);
-  color: #000;
-`;
-
-const ContainerHr = styled.hr`
-  width: 50%;
-  margin: 0 5vw 5vh 0;
-  border: 1px solid #000;
-`;
-
 const Loading = styled.div`
   margin: auto;
   padding: 0 8vw 0 8vw;

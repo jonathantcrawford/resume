@@ -28,7 +28,7 @@ const App = () => {
 export default App;
 
 const AppContainer = styled.div`
-  height: 100vh;
+  height: 110vh;
   box-sizing: border-box;
   background-color: white;
   width: 100%;

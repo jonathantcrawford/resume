@@ -21,8 +21,6 @@ const Experience = () => {
     const { experience } = content;
   return (
     <ExperienceContainer>
-      <ContainerHeader>experience</ContainerHeader>
-      <ContainerHr></ContainerHr>
       {experience.map((job:any, index:any) => {
           return (
             <ExperienceStyled key={index}>
@@ -54,6 +52,10 @@ const ExperienceContainer = styled.div`
 
 const ExperienceStyled = styled.div`
   margin-bottom: 10vh;
+  width: 100%;
+  padding: 4vmin;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px -2px #999999;
 `;
 
 const Company = styled.div`
@@ -84,17 +86,6 @@ const Highlights = styled.ul`
 const Highlight = styled.li`
   margin: 2vh 0 2vh 0;
   line-height: 1.6em;
-`;
-
-const ContainerHeader = styled.h1`
-  font-size: calc(10px + 2vmin);
-  color: #000;
-`;
-
-const ContainerHr = styled.hr`
-  width: 50%;
-  margin: 0 5vw 5vh 0;
-  border: 1px solid #000;
 `;
 
 const Loading = styled.div`

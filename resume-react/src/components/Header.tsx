@@ -48,18 +48,21 @@ const ContactInfo = styled.ul`
 `;
 
 const Name = styled.li`
-  font-size: calc(16px + 2vmin);
+  font-family: 'Bitter', serif;
+  font-size: calc(26px + 2vmin);
   color: black;
-  line-height: 2em;
+  line-height: 1.5em;
 `;
 
 const Email = styled.li`
+  font-family: 'Trispace', sans-serif;
   font-size: calc(8px + 2vmin);
   color: black;
   line-height: 1.5em;
 `;
 
 const Phone = styled.li`
+  font-family: 'Trispace', sans-serif;
   font-size: calc(8px + 2vmin);
   color: black;
   line-height: 1.5em;
@@ -74,19 +77,20 @@ const HeaderLinks = styled.div`
 `;
 
 const NavigationLinks = styled(Navigation)`
-  flex: 4;
+  flex: 1;
   margin-bottom: 1em;
 `
 
 const SocialLinks = styled.div`
-  flex: 1;
+  flex: 0;
   align-self: flex-end;
   margin-bottom: 1em;
 `;
 
 const SocialLink = styled.a`
-  margin-right: 15px;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Jost', sans-serif;
+  margin-right: 50px;
+  font-size: calc(16px + 2vmin);
   color: black;
 `;
 
