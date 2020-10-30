@@ -26,17 +26,17 @@ const Skills = () => {
           <SkillList>
             <SkillType>languages</SkillType>
             <StyledHr></StyledHr>
-            {skills.languages.map((language:any, index: any) => <li key={index}>{language}</li>)}
+            {skills.languages.map((language:any, index: any) => <Skill key={index}>{language}</Skill>)}
           </SkillList>    
           <SkillList>
             <SkillType>frameworks</SkillType>
             <StyledHr></StyledHr>
-            {skills.frameworks.map((framework: any, index: any) => <li key={index}>{framework}</li>)}
+            {skills.frameworks.map((framework: any, index: any) => <Skill key={index}>{framework}</Skill>)}
           </SkillList>
           <SkillList>
             <SkillType>dev_tools</SkillType>
             <StyledHr></StyledHr>
-            {skills.dev_tools.map((dev_tool: any, index: any) => <li key={index}>{dev_tool}</li>)}
+            {skills.dev_tools.map((dev_tool: any, index: any) => <Skill key={index}>{dev_tool}</Skill>)}
           </SkillList>
         </SkillsListsContainer>
     </SkillsContainer>
@@ -82,6 +82,10 @@ const SkillType = styled.li`
 const StyledHr = styled.hr`
   width: 100%;
   border: 1px solid #000;
+`;
+
+const Skill = styled.li`
+  line-height: 1.5em;
 `;
 
 const ContainerHeader = styled.h1`

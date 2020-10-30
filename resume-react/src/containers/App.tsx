@@ -7,24 +7,6 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { Tab } from 'semantic-ui-react'
-
-
-const panes = [
-  {
-    menuItem: 'skills',
-    render: () => <Tab.Pane attached={false}><Skills/></Tab.Pane>,
-  },
-  {
-    menuItem: 'experience',
-    render: () => <Tab.Pane attached={false}><Experience/></Tab.Pane>,
-  },
-  {
-    menuItem: 'projects',
-    render: () => <Tab.Pane attached={false}><Projects/></Tab.Pane>,
-  },
-]
-
 
 const App = () => {
   return (
