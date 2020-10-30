@@ -16,23 +16,3 @@ code {
 #root {
   height: 100vh;
 }
-
-@font-face {
-  font-family: 'Bitter', serif;
-  src: url('./fonts/Bitter/Bitter-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: 'Jost', sans-serif;
-  src: url('./fonts/Jost/Jost-VariableFont_wght.ttf');
-}
-
-@font-face {
-  font-family: 'Poppins', sans-serif;
-  src: url('./fonts/Poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Trispace', sans-serif;
-  src: url('./fonts/Trispace/Trispace-VariableFont_wdth\,wght.ttf');
-}
