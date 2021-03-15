@@ -2,7 +2,7 @@
   "name": "resume-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jonathantcrawford.github.io/resume/",
+  "homepage": "http://jonathantcrawford.github.io/resume",
   "dependencies": {
     "@apollo/client": "^3.2.5",
     "@emotion/core": "^10.0.35",
