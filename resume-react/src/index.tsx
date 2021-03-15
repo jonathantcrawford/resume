@@ -5,13 +5,13 @@ import 'semantic-ui-css/semantic.min.css'
 import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { DatabaseProvider } from './providers/databaseProvider';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename="/resume">
+    <Router>
       <DatabaseProvider>
         <App/>
       </DatabaseProvider>
