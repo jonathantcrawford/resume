@@ -11,7 +11,7 @@ import { DatabaseProvider } from './providers/databaseProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <DatabaseProvider>
         <App/>
       </DatabaseProvider>
