@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {HashRouter as Router, Switch, Route, Redirect, NavLink} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect, NavLink} from 'react-router-dom';
 
 
 import DBQueryResult from '../../components/DBQueryResult';
@@ -105,7 +105,7 @@ const Layout = (props: any) => {
     ]});
 
     return (
-        <Router hashType="slash" basename="/">
+        <Router basename="/">
             {layout}
         </Router>
     );
