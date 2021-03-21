@@ -3,22 +3,23 @@ import styled from "@emotion/styled";
 import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
 
+const experience_query = gql`query { 
+  work_experiences {
+    _id,
+    company,
+    duration,
+    highlights,
+    location,
+    role,
+  }
+}`;
+
 const Experience = () => {
-  const experience_query = gql`{ 
-    content {
-      experience {
-          company
-          duration
-          highlights
-          location
-          role
-      }
-    }
-  }`;
     const { data, loading, error } = useQuery(experience_query);
     if (loading) return (<Loading>...loading</Loading>);
-    const { content } = data;
-    const { experience } = content;
+
+    const { work_experiences: experience } = data;
+
   return (
     <ExperienceContainer>
       {experience.map((job:any, index:any) => {

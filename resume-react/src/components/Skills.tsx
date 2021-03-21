@@ -4,22 +4,27 @@ import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
 
 const Skills = () => {
-  const skills_query = gql`{ 
-    content {
-      skills {
-          languages
-          frameworks
-          dev_tools
-      }
+  const skills_query = gql`query GetSkills { 
+    skills {
+      _id,
+      type,
+      name
     }
   }`;
   const { data, loading, error } = useQuery(skills_query);
   if (loading) return (<Loading>...loading</Loading>);
-  const { content } = data;
-  const { skills } = content;
-
+  const { skills } = data;
+  console.log(skills);
   return (
-    <SkillsContainer>
+    <>
+      {skills.map((skill: any) => <div key={skill._id}>{skill.name}</div>)}
+    </>
+  );
+}
+export default Skills;
+
+/**
+ *     <SkillsContainer>
       <SkillsListsContainer>
           <SkillList>
             <SkillType>languages</SkillType>
@@ -38,9 +43,7 @@ const Skills = () => {
           </SkillList>
         </SkillsListsContainer>
     </SkillsContainer>
-  );
-}
-export default Skills;
+ */
 
 const SkillsContainer = styled.div`
   background-color: #fff;

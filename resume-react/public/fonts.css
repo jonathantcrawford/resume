@@ -1,19 +1,26 @@
 @font-face {
-    font-family: 'Bitter', serif;
-    src: url('./fonts/Bitter/Bitter-VariableFont_wght.ttf');
-  }
+  font-family: 'Bitter', serif;
+  src: url('./fonts/Bitter/Bitter-VariableFont_wght.ttf');
+}
   
-  @font-face {
-    font-family: 'Jost', sans-serif;
-    src: url('./fonts/Jost/Jost-VariableFont_wght.ttf');
-  }
+@font-face {
+  font-family: 'Jost', sans-serif;
+  src: url('./fonts/Jost/Jost-VariableFont_wght.ttf');
+}
   
-  @font-face {
-    font-family: 'Poppins', sans-serif;
-    src: url('./fonts/Poppins/Poppins-Regular.ttf');
-  }
-  
-  @font-face {
-    font-family: 'Trispace', sans-serif;
-    src: url('./fonts/Trispace/Trispace-VariableFont_wdth\,wght.ttf');
-  }
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url('./fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Trispace', sans-serif;
+  src: url('./fonts/Trispace/Trispace-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Fira Mono', monospace;
+  src:  url('./fonts/Fira_Mono/FiraMono-Bold.ttf'),
+        url('./fonts/Fira_Mono/FiraMono-Medium.ttf'),
+        url('./fonts/Fira_Mono/FiraMono-Regular.ttf');
+}

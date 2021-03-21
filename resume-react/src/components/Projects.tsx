@@ -16,25 +16,24 @@ const groupBy = (array: any, key: any) => {
   }, {}); // empty object is the initial value for result object
 };
 
-const Projects = () => {
-  const projects_query = gql`{ 
-    content {
-      projects {
-            title
-            tools
-            highlights
-            links {
-            title
-            url
-            }
-            date
-        }
+const projects_query = gql`query GetProjects { 
+  projects {
+    title
+    tools
+    highlights
+    links {
+    title
+    url
     }
-  }`;
+    date
+  }
+}`;
+
+const Projects = () => {
+
   const { data, loading, error } = useQuery(projects_query);
   if (loading) return (<Loading>...loading</Loading>);
-  const { content } = data;
-  const { projects } = content;
+  const { projects } = data;
   const projectsByDate = groupBy(projects, "date")
   const sortedDates = Object.keys(projectsByDate).sort((a: string,b: string) => {return parseInt(b) - parseInt(a)});
 

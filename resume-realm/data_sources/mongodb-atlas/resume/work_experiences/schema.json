@@ -1,0 +1,29 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "company": {
+            "bsonType": "string"
+        },
+        "duration": {
+            "bsonType": "string"
+        },
+        "highlights": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "location": {
+            "bsonType": "string"
+        },
+        "role": {
+            "bsonType": "string"
+        },
+        "slug": {
+            "bsonType": "string"
+        }
+    },
+    "title": "work_experience"
+}

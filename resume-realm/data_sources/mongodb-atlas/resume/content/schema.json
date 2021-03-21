@@ -3,142 +3,22 @@
         "_id": {
             "bsonType": "objectId"
         },
-        "contact_info": {
+        "data": {
             "bsonType": "object",
             "properties": {
-                "email": {
-                    "bsonType": "string"
-                },
-                "first_name": {
-                    "bsonType": "string"
-                },
-                "last_name": {
-                    "bsonType": "string"
-                },
-                "links": {
-                    "bsonType": "array",
-                    "items": {
-                        "bsonType": "object",
-                        "properties": {
-                            "title": {
-                                "bsonType": "string"
-                            },
-                            "url": {
-                                "bsonType": "string"
-                            }
-                        }
-                    }
-                },
-                "phone": {
+                "headshot_url": {
                     "bsonType": "string"
                 }
             }
         },
-        "education": {
-            "bsonType": "array",
-            "items": {
-                "bsonType": "object",
-                "properties": {
-                    "degree": {
-                        "bsonType": "string"
-                    },
-                    "duration": {
-                        "bsonType": "string"
-                    },
-                    "institution": {
-                        "bsonType": "string"
-                    }
-                }
-            }
+        "slug": {
+            "bsonType": "string"
         },
-        "experience": {
-            "bsonType": "array",
-            "items": {
-                "bsonType": "object",
-                "properties": {
-                    "company": {
-                        "bsonType": "string"
-                    },
-                    "duration": {
-                        "bsonType": "string"
-                    },
-                    "highlights": {
-                        "bsonType": "array",
-                        "items": {
-                            "bsonType": "string"
-                        }
-                    },
-                    "location": {
-                        "bsonType": "string"
-                    },
-                    "role": {
-                        "bsonType": "string"
-                    }
-                }
-            }
+        "template": {
+            "bsonType": "string"
         },
-        "projects": {
-            "bsonType": "array",
-            "items": {
-                "bsonType": "object",
-                "properties": {
-                    "date": {
-                        "bsonType": "string"
-                    },
-                    "highlights": {
-                        "bsonType": "array",
-                        "items": {
-                            "bsonType": "string"
-                        }
-                    },
-                    "links": {
-                        "bsonType": "array",
-                        "items": {
-                            "bsonType": "object",
-                            "properties": {
-                                "title": {
-                                    "bsonType": "string"
-                                },
-                                "url": {
-                                    "bsonType": "string"
-                                }
-                            }
-                        }
-                    },
-                    "title": {
-                        "bsonType": "string"
-                    },
-                    "tools": {
-                        "bsonType": "array",
-                        "items": {
-                            "bsonType": "string"
-                        }
-                    }
-                }
-            }
-        },
-        "skills": {
-            "bsonType": "object",
-            "properties": {
-                "dev_tools": {
-                    "bsonType": "array",
-                    "items": {
-                        "bsonType": "string"
-                    }
-                },
-                "frameworks": {
-                    "bsonType": "array",
-                    "items": {
-                        "bsonType": "string"
-                    }
-                },
-                "languages": {
-                    "bsonType": "array",
-                    "items": {
-                        "bsonType": "string"
-                    }
-                }
-            }
+        "theme": {
+            "bsonType": "string"
         }
     },
     "title": "content"

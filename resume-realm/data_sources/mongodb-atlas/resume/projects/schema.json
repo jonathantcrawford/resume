@@ -1,0 +1,43 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "date": {
+            "bsonType": "string"
+        },
+        "highlights": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "links": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "title": {
+                        "bsonType": "string"
+                    },
+                    "url": {
+                        "bsonType": "string"
+                    }
+                }
+            }
+        },
+        "slug": {
+            "bsonType": "string"
+        },
+        "title": {
+            "bsonType": "string"
+        },
+        "tools": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        }
+    },
+    "title": "project"
+}

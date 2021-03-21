@@ -1,0 +1,17 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "name_lower_case": {
+            "bsonType": "string"
+        },
+        "slug": {
+            "bsonType": "string"
+        },
+        "type": {
+            "bsonType": "string"
+        }
+    },
+    "title": "skill"
+}

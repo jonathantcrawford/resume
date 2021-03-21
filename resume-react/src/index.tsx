@@ -5,17 +5,15 @@ import 'semantic-ui-css/semantic.min.css'
 import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
 
-import { HashRouter as Router } from 'react-router-dom';
+
 import { DatabaseProvider } from './providers/databaseProvider';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <DatabaseProvider>
-        <App/>
-      </DatabaseProvider>
-    </Router>
+    <DatabaseProvider>
+      <App/>
+    </DatabaseProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

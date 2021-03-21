@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "email": {
+            "bsonType": "string"
+        },
+        "first_name": {
+            "bsonType": "string"
+        },
+        "last_name": {
+            "bsonType": "string"
+        },
+        "links": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "title": {
+                        "bsonType": "string"
+                    },
+                    "url": {
+                        "bsonType": "string"
+                    }
+                }
+            }
+        },
+        "phone": {
+            "bsonType": "string"
+        }
+    },
+    "title": "contact_info"
+}
