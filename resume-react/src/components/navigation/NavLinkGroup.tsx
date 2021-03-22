@@ -4,6 +4,7 @@ import { faAngleRight, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import {useTheme} from '@emotion/react';
 import styled from "@emotion/styled";
 
+
 const NavLinkGroup = (props: any) => {
     const type = props.type || 'default';
     const theme: any = useTheme();
@@ -17,7 +18,7 @@ const NavLinkGroup = (props: any) => {
         return React.cloneElement(child, {
             ...child.props, 
             key:index, 
-            to: props.base + child.props.to, 
+            to: props.base + child.props.to,
             style: {display: isOpen ? 'block' : 'none', paddingTop: '5px'}
         })
     } );

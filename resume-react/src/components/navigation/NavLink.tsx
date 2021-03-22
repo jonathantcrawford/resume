@@ -12,9 +12,12 @@ const NavLink = (props: any) => {
         color: ${theme.navlink[type].color};
         &:hover {
             cursor: pointer;
-            color: ${theme.link[type].hover.color};
+            color: ${theme.navlink[type].hover.color};
         }
-    `, props);
+        &.active {
+            color: ${theme.navlink[type].active.color};
+        }
+    `, {...props, activeClassName: 'active'});
 }
 
 export default NavLink;

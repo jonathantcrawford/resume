@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
 import Text from '../components/basic/Text';
-
+import Loader from '../components/loaders/Loader';
 
 const ContentFactory = ({contentSchematic}: {contentSchematic: any}) => {
 
@@ -12,7 +12,7 @@ const ContentFactory = ({contentSchematic}: {contentSchematic: any}) => {
         return React.createElement(React.lazy(() => {
           return Promise.all([
             import("../content/About"),
-            new Promise(resolve => setTimeout(resolve, 300))
+            new Promise(resolve => setTimeout(resolve, 800))
           ])
           .then(([moduleExports]) => moduleExports);
         }
@@ -23,7 +23,7 @@ const ContentFactory = ({contentSchematic}: {contentSchematic: any}) => {
   })();
 
   return (
-    <Suspense fallback={<Text>building content</Text>}>
+    <Suspense fallback={<Loader themed text="building content"/>}>
       {content}
     </Suspense>
   )

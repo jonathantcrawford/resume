@@ -1,14 +1,11 @@
 import React from 'react';
 
 
-import {useTheme} from '@emotion/react';
 
-
-import styled from "@emotion/styled";
 
 const About = ({data}: {data: any}) => {
     return (
-        <img src={data.headshot_url}/>
+        <img src={data.headshot_url} alt='headshot'/>
     );
 }
 export default About

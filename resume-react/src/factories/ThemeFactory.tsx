@@ -1,5 +1,8 @@
 import React, {Suspense} from 'react';
 
+import Error from '../components/error/Error';
+import ThemeLoader from '../components/loaders/ThemeLoader';
+
 const ThemeFactory = ({themeSchematic}: {themeSchematic: any}) => {
 
   const {type, configs} = themeSchematic;
@@ -25,12 +28,12 @@ const ThemeFactory = ({themeSchematic}: {themeSchematic: any}) => {
         }
         ), {configs});
       default:
-        return <div>theme type does not exist</div>;
+        return <Error text="theme type does not exist"/>;
     }
   })();
 
   return (
-    <Suspense fallback={<div>building theme</div>}>
+    <Suspense fallback={<ThemeLoader text="building theme"/>}>
       {theme}
     </Suspense>
   )
