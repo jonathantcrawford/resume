@@ -16,19 +16,16 @@ realm-cli pull --remote resume-realm-nxcpz
 
 
 # TODO
-- Reorganize Styled Components
-- New Font
+~~Reorganize Styled Components~~
+~~New Font~~
 - Sticky Header
 - Fancy Buttons
 - Mobile Nav Icons
 
-- Picture
+~~Picture~~
 
-- Is Mobile Hook
-- Mobile - Copy Mac Files App
-- tab to display json or ui
+- Is Mobile Hook To Switch Theme
 
-- Desktop - File Directory Concept
+~~Desktop - File Directory Concept~~
 
-- display the json
-- display ui output preview to right
+~~display the json~~
