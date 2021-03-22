@@ -12,7 +12,7 @@ const ThemeFactory = ({themeSchematic}: {themeSchematic: any}) => {
       case "standard":
         return React.createElement(React.lazy(() => {
           return Promise.all([
-            import("../themes/Standard"),
+            import("../themes/standard"),
             new Promise(resolve => setTimeout(resolve, 1000))
           ])
           .then(([moduleExports]) => moduleExports);
@@ -21,7 +21,7 @@ const ThemeFactory = ({themeSchematic}: {themeSchematic: any}) => {
       case "traditional":
         return React.createElement(React.lazy(() => {
           return Promise.all([
-            import("../themes/Traditional"),
+            import("../themes/traditional"),
             new Promise(resolve => setTimeout(resolve, 1000))
           ])
           .then(([moduleExports]) => moduleExports);

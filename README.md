@@ -6,7 +6,7 @@ built using
 
 gh-page
 npm run deploy 
-https://jonathantcrawford.github.io/resume
+https://joncrawford.me
 
 
 # How to update Realm Backend
