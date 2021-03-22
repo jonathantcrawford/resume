@@ -48,7 +48,6 @@ const client = new ApolloClient({
 
 export const DatabaseContext = React.createContext({});
 export const DatabaseProvider = ({children}: any) => {
-    console.log('building db provider');
     return (
         <ApolloProvider client={client}>{children}</ApolloProvider>
     )
