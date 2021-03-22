@@ -1,2 +1,0 @@
-(this["webpackJsonpresume-react"]=this["webpackJsonpresume-react"]||[]).push([[6],{125:function(e,t,r){"use strict";r.r(t);var s=r(12);r(4);t.default=function(e){var t=e.data;return Object(s.jsx)("img",{src:t.headshot_url})}}}]);
-//# sourceMappingURL=6.44695efa.chunk.js.map
