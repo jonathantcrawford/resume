@@ -2,13 +2,8 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import * as _ from 'lodash';
 import {ThemeProvider} from '@emotion/react';
-
-
 import DBQueryResult from '../components/DBQueryResult';
-
 import styled from "@emotion/styled";
-
-
 
 import Box from '../components/layout/Box';
 import FlexBox from '../components/layout/FlexBox';
@@ -24,53 +19,62 @@ const Theme = ({configs}: {configs: any}) => {
     const defaultConfigs = {
         text: {
             default: {
-                family: "'Poppins', sans-serif",
+                family: "'Fira Mono', monospace",
                 size: "12px",
                 color: 'black'
             },
             brand: {
-                family: "'Poppins', sans-serif",
+                family: "'Fira Mono', monospace",
                 size: "24px",
-                color: 'blue'
+                color: '#000000'
             },
             tagline: {
-                family: "'Poppins', sans-serif",
+                family: "'Fira Mono', monospace",
                 size: "16px",
-                color: 'purple'
+                color: '#666666'
             }
         },
         link: {
             default: {
-                family: "'Poppins', sans-serif",
+                family: "'Fira Mono', monospace",
                 size: "10px",
-                color: 'purple'
+                color: '#666666',
+                hover: {
+                    color: '#AAAAAA',
+                }
             },
             social: {
-                family: "'Poppins', sans-serif",
-                size: "10px",
-                color: 'purple'
+                family: "'Fira Mono', monospace",
+                size: "14px",
+                color: '#666666',
+                hover: {
+                    color: '#AAAAAA',
+                }
             }
         },
         navlink: {
             default: {
-                family: "'Poppins', sans-serif",
-                size: "16px",
-                color: 'red'
-            }
+                family: "'Fira Mono', monospace",
+                size: "18px",
+                color: '#666666',
+                hover: {
+                    color: '#AAAAAA',
+                }
+            },
         },
         navlinkgroup: {
             default: {
-                family: "'Poppins', sans-serif",
+                family: "'Fira Mono', monospace",
                 size: "18px",
-                color: 'pink',
+                color: '#666666',
                 hover: {
-                    color: 'purple'
+                    color: '#AAAAAA',
                 }
             }
         },
         button: {
             default: {
-                family: "'Poppins', sans-serif",
+                family: "'Fira Mono', monospace",
                 size: "16px",
                 color: 'red',
                 backgroundColor: 'yellow',
@@ -97,9 +101,9 @@ const Theme = ({configs}: {configs: any}) => {
             grid-row: 1 / 2;
             grid-column: 1 / 2;
         `, {...props, children: 
-            <>
+            <FlexBox flexDirection="row">
                 <FlexBox flexDirection="column">
-                    <Text type="brand">Jonathan Crawford</Text>
+                    <Text type="brand">Jon Crawford</Text>
                     <Text type="tagline">Software Engineer</Text>
                     <FlexBox flexDirection="row">
                         <Link href='https://www.linkedin.com/in/jonathantcrawford/' target="_blank">LinkedIn</Link>
@@ -120,7 +124,7 @@ const Theme = ({configs}: {configs: any}) => {
                         <NavLink to='/3d-audio-demo'>3D Audio Demo</NavLink>
                     </NavLinkGroup>
                 </FlexBox>
-            </>
+            </FlexBox>
         });
     }
 

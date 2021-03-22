@@ -1,10 +1,6 @@
 import React from 'react';
-
 import {useTheme} from '@emotion/react';
-
-
 import styled from "@emotion/styled";
-
 
 const Button = (props: any) => {
     const type = props.type || 'default';

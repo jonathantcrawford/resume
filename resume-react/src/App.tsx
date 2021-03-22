@@ -28,7 +28,8 @@ const App = () => {
     <div style={{
       position: 'fixed', 
       top: '0', 
-      right: '0'
+      right: '0',
+      zIndex: 2
       }}>
       <button onClick={() => setThemeSchematic(standardThemeSchematic)}>standard</button>
       <button onClick={() => setThemeSchematic(traditionalThemeSchematic)}>traditional</button>

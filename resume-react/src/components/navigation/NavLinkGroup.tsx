@@ -1,27 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
-
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleDown } from '@fortawesome/free-solid-svg-icons';
-
 import {useTheme} from '@emotion/react';
-
 import styled from "@emotion/styled";
-
-
-import Button from '../basic/Button';
-import Text from '../basic/Text';
-import NavLink from './NavLink';
-
-
 
 const NavLinkGroup = (props: any) => {
     const type = props.type || 'default';
     const theme: any = useTheme();
     const [isOpen, setIsOpen] = useState(true);
-
-
-
 
     const onClick = () => {
         setIsOpen(!isOpen);
@@ -32,7 +18,7 @@ const NavLinkGroup = (props: any) => {
             ...child.props, 
             key:index, 
             to: props.base + child.props.to, 
-            style: {display: isOpen ? 'block' : 'none'}
+            style: {display: isOpen ? 'block' : 'none', paddingTop: '5px'}
         })
     } );
 
@@ -46,14 +32,10 @@ const NavLinkGroup = (props: any) => {
         }
     `, {...props, children: 
         <>
-            <Button onClick={onClick} style={{
-                display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'row',
-            }}>
-                <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight}/>
-                <Text style={{paddingLeft: '10px'}}>{props.name}</Text>
-            </Button>
+            <div style={{display: 'flex', flexDirection:'row', alignItems:'center',}} onClick={onClick}>
+                <div style={{paddingRight: '5px'}}><FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight}/></div>
+                <div>{props.name}</div>
+            </div>
             {links}
         </>
     });

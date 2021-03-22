@@ -1,6 +1,5 @@
 import React, {Suspense} from 'react';
-
-
+import Text from '../components/basic/Text';
 
 
 const ContentFactory = ({contentSchematic}: {contentSchematic: any}) => {
@@ -19,12 +18,12 @@ const ContentFactory = ({contentSchematic}: {contentSchematic: any}) => {
         }
         ), {data});
       default:
-        return <div>content template does not exist</div>;
+        return <Text>content template does not exist</Text>;
     }
   })();
 
   return (
-    <Suspense fallback={<div>Building Content</div>}>
+    <Suspense fallback={<Text>building content</Text>}>
       {content}
     </Suspense>
   )

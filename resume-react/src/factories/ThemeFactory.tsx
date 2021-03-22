@@ -1,8 +1,5 @@
 import React, {Suspense} from 'react';
 
-
-
-
 const ThemeFactory = ({themeSchematic}: {themeSchematic: any}) => {
 
   const {type, configs} = themeSchematic;
@@ -33,7 +30,7 @@ const ThemeFactory = ({themeSchematic}: {themeSchematic: any}) => {
   })();
 
   return (
-    <Suspense fallback={<div>Building Theme</div>}>
+    <Suspense fallback={<div>building theme</div>}>
       {theme}
     </Suspense>
   )

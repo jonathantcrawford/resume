@@ -1,11 +1,6 @@
 import React from 'react';
-
-
 import {NavLink as _NavLink} from 'react-router-dom';
-
 import {useTheme} from '@emotion/react';
-
-
 import styled from "@emotion/styled";
 
 const NavLink = (props: any) => {
@@ -15,6 +10,10 @@ const NavLink = (props: any) => {
         font-family: ${theme.navlink[type].family};
         font-size: ${theme.navlink[type].size};
         color: ${theme.navlink[type].color};
+        &:hover {
+            cursor: pointer;
+            color: ${theme.link[type].hover.color};
+        }
     `, props);
 }
 

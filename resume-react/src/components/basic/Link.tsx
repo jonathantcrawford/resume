@@ -1,8 +1,5 @@
 import React from 'react';
-
 import {useTheme} from '@emotion/react';
-
-
 import styled from "@emotion/styled";
 
 const Link = (props: any) => {
@@ -12,6 +9,10 @@ const Link = (props: any) => {
         font-family: ${theme.link[type].family};
         font-size: ${theme.link[type].size};
         color: ${theme.link[type].color};
+        &:hover {
+            cursor: pointer;
+            color: ${theme.link[type].hover.color};
+        }
     `, props);
 }
 
